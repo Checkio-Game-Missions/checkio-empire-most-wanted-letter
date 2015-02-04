@@ -1,6 +1,4 @@
-checkio-task-most-wanted-letter
+most-wanted-letter
 ===============================
 
-Checkio Task "The Most Wanted Letter"
-
-
+Crystal Farm 3.4 "The Most Wanted Letter"
