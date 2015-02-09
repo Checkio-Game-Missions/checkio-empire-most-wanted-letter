@@ -1,2 +1,1 @@
-For improvement of robot literacy (we still need good reports)
-we will use "Letter Hunt" Game, but with little modification.
+In our continued developments in improving robot literacy, command has decided to use the a modified version of the "Letter Hunt" game.
