@@ -1,7 +1,7 @@
 from checkio_referee.rank import RefereeRank
 from checkio_referee import covercodes, representations, validators
 
-import settings
+
 import settings_env
 from tests import TESTS
 
