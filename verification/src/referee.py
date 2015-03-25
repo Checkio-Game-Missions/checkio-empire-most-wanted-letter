@@ -26,10 +26,10 @@ cover = """def cover(f, data):
 
 class Referee(RefereeRank):
     TESTS = TESTS
-    EXECUTABLE_PATH = settings.EXECUTABLE_PATH
-    CURRENT_ENV = settings_env.CURRENT_ENV
+    ENVIRONMENTS = settings_env.ENVIRONMENTS
+
     VALIDATOR = LetterInValidator
-    FUNCTION_NAME = "most_letter"
+    DEFAULT_FUNCTION_NAME = "most_letter"
     ENV_COVERCODE = {
         "python_2": cover,
         "python_3": cover,
