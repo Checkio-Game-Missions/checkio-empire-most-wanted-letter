@@ -8,12 +8,21 @@ if __name__ == '__main__':
     # Rank_1
     assert most_letter("Hello World!") == "l", "Hello test"
     assert most_letter("How do you do?") == "o", "O is most wanted"
-    assert most_letter("One") == "e", "All letter only once."
+    result = most_letter("One")
+    assert len(result) == 1 and result in "one", "All letter only once."
     assert most_letter("Oops!") == "o", "Don't forget about lower case."
-    assert most_letter("AAaooo!!!!") in "ao", "Only letters."
-    assert most_letter("abe") in "abe", "The First."
-    assert most_letter("'Lorem ipsum dolor sit amet'") in "mo", "Lorem 1."
+    result = most_letter("AAaooo!!!!")
+    assert len(result) == 1 and result in "ao", "Only letters."
+    result = most_letter("abe")
+    assert len(result) == 1 and result in "abe", "The First."
+    result = most_letter("Lorem ipsum dolor sit amet")
+    assert len(result) == 1 and result in "mo", "Lorem 1."
+
     # Rank_2
-    assert most_letter("'Lorem ipsum dolor sit amet'") == "m", "Lorem 2."
+    assert most_letter("Lorem ipsum dolor sit amet") == "m", "Lorem 2."
+    assert most_letter("One") == "e", "One 2"
+    assert most_letter("AAaooo!!!!") == "a", "Only letters. 2"
+    assert most_letter("bcdefghijklmnaopqrstuvwxyz") == "a", "ABC"
+
     # Rank_3
-    assert most_letter("'Lorem ipsum dolor sit amet'") == "moeilrstadpu", "Lorem 3."
+    assert most_letter("Lorem ipsum dolor sit amet", True) == "moeilrstadpu", "Lorem 3."
