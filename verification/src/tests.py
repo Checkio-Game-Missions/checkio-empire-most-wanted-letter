@@ -126,7 +126,7 @@ TESTS = {
             "answer": "k",
         },
     ],
-    "Rank_3": [
+    "Rank_03": [
         {
             "input": ['fsbd', True],
             "answer": "bdfs",
