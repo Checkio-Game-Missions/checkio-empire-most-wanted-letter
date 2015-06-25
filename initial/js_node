@@ -1,0 +1,37 @@
+"use strict";
+
+function mostLetter(text, allLetters){
+    allLetters = allLetters || false;
+    return "a";
+}
+
+var assert = require("assert");
+
+if (!global.is_checking) {
+    // These "asserts" using only for self-checking and not necessary for auto-testing
+    // Rank_1
+    assert.equal(mostLetter("Hello World!"), "l", "Hello test");
+    assert.equal(mostLetter("How do you do?"), "o", "O is most wanted");
+
+    var result = mostLetter("One");
+    assert(result.length === 1 && "one".indexOf !== -1, "All letter only once.");
+    assert.equal(mostLetter("Oops!"), "o", "Don't forget about lower case.");
+
+    result = mostLetter("AAaooo!!!!");
+    assert(result.length === 1 && "ao".indexOf(result) !== -1, "Only letters.");
+
+    result = mostLetter("abe");
+    assert.(result.length === 1 && "abe".indexOf(result) !== -1, "The First.");
+
+    result = mostLetter("Lorem ipsum dolor sit amet");
+    assert.(result.length === 1 && "mo".indexOf(result) !== -1, "Lorem 1.");
+
+    // Rank_2
+    assert.equal(mostLetter("Lorem ipsum dolor sit amet"), "m", "Lorem 2.");
+    assert.equal(mostLetter("One"), "e", "One 2");
+    assert.equal(mostLetter("AAaooo!!!!"), "a", "Only letters. 2");
+    assert.equal(mostLetter("bcdefghijklmnaopqrstuvwxyz"), "a", "ABC");
+
+    // Rank_3
+    assert.equal(mostLetter("Lorem ipsum dolor sit amet", true), "moeilrstadpu", "Lorem 3.");
+}

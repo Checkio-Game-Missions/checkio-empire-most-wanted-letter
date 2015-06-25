@@ -1,5 +1,5 @@
 from checkio_referee import RefereeRank
-from checkio_referee import covercodes, representations, validators
+from checkio_referee import covercodes, representations, validators, ENV_NAME
 
 
 import settings_env
@@ -19,9 +19,18 @@ class LetterInValidator(validators.BaseValidator):
                 outer_result == self._test["answer"])
 
 
-cover = """def cover(f, data):
+py_cover = """def cover(f, data):
     return f(*[str(x) if not isinstance(x, bool) else x for x in data])
 """
+
+js_cover = """var cover = function(f, data){
+    if (data.length === 1) {
+        return f(data[0]);
+    else {
+        return f(data[0], data[1]);
+    }
+}"""
+
 
 
 class Referee(RefereeRank):
@@ -30,13 +39,14 @@ class Referee(RefereeRank):
 
     VALIDATOR = LetterInValidator
     DEFAULT_FUNCTION_NAME = "most_letter"
+    FUNCTION_NAMES = {
+        ENV_NAME.JS_NODE: "mostLetter"
+    }
     ENV_COVERCODE = {
-        "python_2": cover,
-        "python_3": cover,
-        "javascript": None
+        ENV_NAME.PYTHON: py_cover,
+        ENV_NAME.JS_NODE: js_cover
     }
     CALLED_REPRESENTATIONS = {
-        "python_2": representations.unwrap_arg_representation,
-        "python_3": representations.unwrap_arg_representation,
-        "javascript": representations.unwrap_arg_representation,
+        ENV_NAME.PYTHON: representations.unwrap_arg_representation,
+        ENV_NAME.JS_NODE: representations.unwrap_arg_representation,
     }
