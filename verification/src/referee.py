@@ -26,6 +26,7 @@ py_cover = """def cover(f, data):
 js_cover = """var cover = function(f, data){
     if (data.length === 1) {
         return f(data[0]);
+    }
     else {
         return f(data[0], data[1]);
     }
