@@ -13,10 +13,10 @@ class LetterInValidator(validators.BaseValidator):
             return validators.ValidatorResult(
                 isinstance(outer_result, str) and
                 len(outer_result) == 1 and
-                outer_result in self._test["answer"])
+                outer_result in self._test["answer_data"])
         else:
             return validators.ValidatorResult(
-                outer_result == self._test["answer"])
+                outer_result == self._test["answer_data"])
 
 
 py_cover = """def cover(f, data):
