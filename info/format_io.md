@@ -1,4 +1,4 @@
-**Input:** A text for analysis as a string. 
-Second argument is optional with default value is using for "Rank 3". 
+**Input:** Some text for analysis as a string. 
+The second argument is optional with the default value is used for "Rank 3". 
 
 **Output:** The most frequent letter in lower case as a string.
