@@ -26,3 +26,5 @@ if __name__ == '__main__':
 
     # Rank_3
     assert most_letter("Lorem ipsum dolor sit amet", True) == "moeilrstadpu", "Lorem 3."
+
+    print("Use 'Check' to earn sweet rewards!")
