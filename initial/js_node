@@ -34,4 +34,6 @@ if (!global.is_checking) {
 
     // Rank_3
     assert.equal(mostLetter("Lorem ipsum dolor sit amet", true), "moeilrstadpu", "Lorem 3.");
+    console.log("All done? Earn rewards by using the 'Check' button!");
 }
+
